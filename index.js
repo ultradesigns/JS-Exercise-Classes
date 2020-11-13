@@ -50,10 +50,14 @@ class Person{
   eat(food){
     if(this.stomach.length < 10){
       this.stomach.push(food);
-    } else{
-      this.stomach = [];
     }
-    return toString(`${this.name}, is ${this.age} yrs. old.`);
+  }
+  poop(){
+  this.stomach = [];
+  } 
+    speak(){
+      return `${this.name}, is ${this.age} yrs. old.`;
+    }
   }
 }
 
@@ -74,7 +78,15 @@ class Person{
 */
 
 class Car {
-
+  constructor function(model, milesPerGallon){
+    this.model = model;
+    this.milesPerGallon= milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+  fill(gallons){
+    this.tank.push(gallons);
+  }
 }
 
 /*
