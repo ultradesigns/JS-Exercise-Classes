@@ -55,11 +55,11 @@ class Person{
   poop(){
   this.stomach = [];
   } 
-    speak(){
+    toString(){
       return `${this.name}, is ${this.age} yrs. old.`;
     }
   }
-}
+
 
 
 
@@ -78,17 +78,25 @@ class Person{
 */
 
 class Car {
-  constructor function(model, milesPerGallon){
+  constructor (model, milesPerGallon){
     this.model = model;
     this.milesPerGallon= milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
   }
-  fill(gallons){
-    this.tank.push(gallons);
-  }
-}
 
+  fill(gallons){
+    this.tank = gallons.tank;
+  }
+  drive(distance){
+    const driven = (this.tank * this.milesPerGallon);
+     if(distance < driven){
+        this.odometer += distance;
+        this.tank = this.tank/(distance/this.milesPerGallon.toFixed(2)); 
+        } else (this.tank === 0){
+            return `I ran out of fuel at ${this.odometer}`;
+        }
+      }
 /*
   TASK 3
     - Write a Lambdasian class.
@@ -101,7 +109,15 @@ class Car {
         + Speaking should return a phrase `Hello my name is {name}, I am from {location}`.
         + {name} and {location} of course come from the instance's own properties.
 */
-class Lambdasian {
+class Lambdasian{
+  constructor(arguments){
+    this.name = name;
+    this.age = age;
+    this.location = location;
+  }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${location}`;
+  }
 
 }
 
